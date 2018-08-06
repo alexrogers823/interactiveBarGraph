@@ -326,23 +326,23 @@
 
     const marginSpace = 10;
 
-    d3.json('./month_expenses_2016.json', (error, dataset) => {
-      console.log(dataset);
-      // Changing the data each second
-      let flag = true, numeric = 1;
-      setInterval(() => {
-        // dataset = flag ? data1 : data2;
-        update(dataset, numeric);
-        flag = !flag;
-        numeric++;
-        if (numeric > 2) {
-          numeric = 1;
-        }
-      }, 1500);
-
-      // update(data1, 1);
-
-    });
+    // d3.json('./month_expenses_2016.json', (error, dataset) => {
+    //   console.log(dataset);
+    //   // Changing the data each second
+    //   let flag = true, numeric = 1;
+    //   setInterval(() => {
+    //     // dataset = flag ? data1 : data2;
+    //     update(dataset, numeric);
+    //     flag = !flag;
+    //     numeric++;
+    //     if (numeric > 2) {
+    //       numeric = 1;
+    //     }
+    //   }, 1500);
+    //
+    //   // update(data1, 1);
+    //
+    // });
 
     function processData(data, number) {
       let obj = data[0][`month${number}`].Expenses;
@@ -485,6 +485,19 @@
     //   .attr("font-size", 32)
     //   .attr("color", "black");
 
+    // Changing the data each second
+    let flag = true, numeric = 1;
+    setInterval(() => {
+      dataset = flag ? data1 : data2;
+      update(dataset, numeric);
+      flag = !flag;
+      numeric++;
+      if (numeric > 2) {
+        numeric = 1;
+      }
+    }, 1500);
+
+    update(data1, 1);
 
 
 
