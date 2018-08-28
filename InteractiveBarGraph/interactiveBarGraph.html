@@ -23,6 +23,12 @@
       /* display: none; */
     }
 
+    /* .tick text {
+      font-size: 10px;
+      transform: rotate(90);
+      color: red;
+    } */
+
     svg {
       background-color: #dddddd;
       /* background-color: rgb(225, 225, 225); */
@@ -287,9 +293,13 @@
       .domain([0, 1050])
       .range([height, 0]);
 
-    const categoryScale = d3.scale.ordinal()
-      .domain(d3.range(categoryLength))
-      .rangeRoundBands([0, width], .1);
+    // const categoryScale = d3.scale.ordinal()
+    //   .domain(d3.range(categoryLength))
+    //   .rangeRoundBands([0, width], .1);
+
+    const categoryScale = d3.scale.linear()
+      .domain([0, categoryLength])
+      .range([moveX, width]); //moveX + yAxis distance
 
     const axis = d3.svg.axis()
       .ticks(20)
@@ -470,11 +480,12 @@
     // Calling the categorical axis
     svgContainer.append("g")
       .attr("class", "categoryAxis")
-      .attr("transform", `translate(0, ${height+5})`)
+      .attr("transform", `translate(${moveX/2}, ${height+5})`)
       .call(categoryAxis)
       .selectAll("text")
       // .attr("transform", "translate(45, 0)")
-      .attr("transform", "rotate(60)");
+      // .attr("transform-origin", (d, i) => "50%")
+      .attr("transform", "rotate(90)");
       // .attr("dy", "0.71em");
 
     // Name of current month
