@@ -5,6 +5,7 @@
 
 // Duration time will come later
 
+
 // Connecting to and using mongoose
 /* const express = require("express");
 const mongoose = require("mongoose");
@@ -37,15 +38,15 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 // document.querySelector('monthTitle').innerHTML = months[0] why isn't this working
 
 // Once actual data is imported, start with this and indent everything else
-d3.json("month_expenses_2016.json", data => {
+// d3.json("month_expenses_2016.json", data => {
   // console.log(data);
     // Making the SVG container
-  const svgContainer = d3.select("body").append("svg")
-  .attr("width", 1000)
-  .attr("height", 550)
-  .append("g");
+const svgContainer = d3.select("body").append("svg")
+.attr("width", 1000)
+.attr("height", 550)
+.append("g");
 
-  const marginSpace = 10;
+const marginSpace = 10;
 
   // // Set x and y axis
   // const x = d3.scale.ordinal().rangeRoundBands([0, 1000], 0.1);
@@ -58,41 +59,41 @@ d3.json("month_expenses_2016.json", data => {
   // .attr("transform", "translate(0, 550)")
   // .call(xAxis);
 
-  // Rectangles using data
-  const otherRectangles = svgContainer.selectAll(".bar")
-  .data(data)
-  .enter()
-  .append("rect")
-  .attr("class", "bar")
-  .attr("x", (d, i) => (i * 60) + 130)
-  // .attr("y", d => 550 - marginSpace - (d.Expenses.Cost * 10))
-  .attr("y", 400)
-  .attr("width", 50)
-  // .attr("height", d => d.Expenses.Cost * 10);
-  .attr("height", 100);
-  //Find out why text isn't showing up
-  // const text = svgContainer.selectAll(".bar")
-  // .data(data)
-  // .enter()
-  // .append("text")
-  // .attr("fill", "white")
-  // .attr("x", (d, i) => (i * 60) + 130 + 25)
-  // .attr("y", d => 525 - marginSpace)
-  // .text(d => d.exp);
-  });
+// Rectangles using data
+const otherRectangles = svgContainer.selectAll(".bar")
+.data(data)
+.enter()
+.append("rect")
+.attr("class", "bar")
+.attr("x", (d, i) => (i * 60) + 130)
+// .attr("y", d => 550 - marginSpace - (d.Expenses.Cost * 10))
+.attr("y", 400)
+.attr("width", 50)
+// .attr("height", d => d.Expenses.Cost * 10);
+.attr("height", 100);
+//Find out why text isn't showing up
+// const text = svgContainer.selectAll(".bar")
+// .data(data)
+// .enter()
+// .append("text")
+// .attr("fill", "white")
+// .attr("x", (d, i) => (i * 60) + 130 + 25)
+// .attr("y", d => 525 - marginSpace)
+// .text(d => d.exp);
+// });
 
 
 
 
-// // Drawing a basic rectangle
-// const rectangle1 = svgContainer.append("rect")
-//                             .attr("x", 10)
-//                             .attr("y", 550 - marginSpace - 300)
-//                             .attr("width", 50)
-//                             .attr("height", 300);
-//
-// const rectangle2 = svgContainer.append("rect")
-//                             .attr("x", 70)
-//                             .attr("y", 550 - marginSpace - 200)
-//                             .attr("width", 50)
-//                             .attr("height", 200);
+// Drawing a basic rectangle
+const rectangle1 = svgContainer.append("rect")
+                            .attr("x", 10)
+                            .attr("y", 550 - marginSpace - 300)
+                            .attr("width", 50)
+                            .attr("height", 300);
+
+const rectangle2 = svgContainer.append("rect")
+                            .attr("x", 70)
+                            .attr("y", 550 - marginSpace - 200)
+                            .attr("width", 50)
+                            .attr("height", 200);
