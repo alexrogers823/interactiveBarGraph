@@ -1,0 +1,48 @@
+html {
+  /* background-color: green; */
+}
+
+body {
+  width: 90%;
+  /* background-color: red; */
+}
+
+.bar:hover {
+  fill: black;
+}
+
+.yAxis {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.categoryAxis {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.background { /* svg */
+  background: linear-gradient(#00BFFF, #EEEEEE, #87CEFA, #FFFFFF);
+}
+
+.heading {
+  background-color: rgba(0, 50, 255, 0.4);
+  width: 50%;
+}
+
+.fab:hover {
+  color: green;
+}
+
+span {
+  font-weight: bold;
+  font-style: normal;
+  text-shadow: 1px 1px 1px #adadad;
+}
+
+#monthTitle {
+  font-style: italic;
+  font-size: 20px;
+  padding: 3px;
+  /* text-align: center; */
+}
