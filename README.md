@@ -26,6 +26,6 @@ After playing around with JavaScript for a few months, I found a blog that showe
 - Intermediate challenge: Use your own set of data to reference in the graph
 - Advanced challenge: Recreate the entire graph from scratch
 
-Acknowledgements
+## Acknowledgements
 
 Special thanks to David Walsh for providing an interactive example on his [blog](https://davidwalsh.name/learning-d3), which inspired me to start learning D3.
