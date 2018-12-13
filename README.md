@@ -5,6 +5,7 @@ This program uses JSON data on a year of monthly expenses, and illustrates a bar
 
 ## Technologies Used
 - JavaScript
+- MongoDB (for extracting and importing data)
 - [D3.js](https://d3js.org/)
 
 ## Author
